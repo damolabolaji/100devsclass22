@@ -55,18 +55,16 @@ rockPaperScissors()
 //paper - scissors = bot wins
 //
 
-let playerChoice = prompt('rock or Paper or Scissors')
-
-function gameWithBot(){
+function gameWithBot(playerChoice){
     if(rockPaperScissors() === playerChoice ){
-        console.log('You Tied')
+        return 'You Tied'
     }
     else if ((rockPaperScissors() === 'scissors' && playerChoice === 'rock') ||
     (rockPaperScissors() === 'paper' && playerChoice === 'scissors') ||
     (rockPaperScissors() === 'scissors' && playerChoice === 'rock') ) {
-        console.log('You Win')
+        return'You Win'
     }else{
-        console.log('You Lose')
+        return 'You Lose'
     }
 
 
@@ -75,3 +73,12 @@ gameWithBot()
 
 //*Loops*
 //Create a function that takes an array of choices. Play the game x times where x is the number of choices in the array. Print the results of each game to the console.
+
+function playChoices(array){
+    for( let i = 0; i< array.length; i++){
+        
+        console.log(gameWithBot(array[i]));
+    }
+}
+
+playChoices(['rock', 'paper', 'scissors'])
