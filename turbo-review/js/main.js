@@ -33,6 +33,19 @@ console.log(sumOfItems)
 
 // *Functions*
 // Create a function that returns rock, paper, or scissors as randomly as possible
+function rockPaperScissors() {
+    randomNumber = Math.random();
+
+    if(randomNumber < 0.33){
+        console.log('rock')
+    }else if(randomNumber < 0.66 ){
+        console.log('paper')
+    }else{
+        console.log('scissors')
+    }
+}
+rockPaperScissors()
+
 
 // *Conditionals*
 //Create a function that takes in a choice (rock, paper, or scissors) and determines if they won a game of rock paper scissors against a bot using the above function
