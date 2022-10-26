@@ -12,13 +12,28 @@ console.log(arraySquared)
 
 //Create a function that takes string
 //Print the reverse of that string to the console
-let str = 'I love my journey so far'
-let strRev = str.split('').reverse().join('')
-console.log(strRev)
-console.log(strRev.length)
-console.log(str.length)
+let string = 'I love my journey so far'
+function reverseString(str){
+    let strRev = str.split('').reverse().join('')
+    
+    console.log(str)
+}
+reverseString(string)
+
 
 
 
 //Create a function that takes in a string
 //Alert if the string is a palindrome or not
+
+function palindrome(str){
+    let strRev = str.split('').reverse().join('')
+    if(str === strRev){
+        alert('this is a palindrome')
+    }
+    else{
+        alert('this is not a palindrome')
+    }
+}
+
+palindrome("cosplay")
