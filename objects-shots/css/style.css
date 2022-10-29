@@ -13,9 +13,22 @@
 img{
   display: block;
   margin: 0 auto;
+  width: 100%;
 }
 
 
 /******************************************
 /* ADDITIONAL STYLES
 /*******************************************/
+
+.answer-carousel {
+  display: flex;
+}
+
+.answer-carousel button {
+width: 60px;
+}
+
+.answer-block {
+  width: 300px;
+}
