@@ -2,58 +2,68 @@
 
 
 
-document.querySelector('#search').addEventListener('click', getValue)
+// document.querySelector('#search').addEventListener('click', getValue)
 
       
-function getValue(){
-  let searchValue = document.querySelector('input').value.split(' ').join('')
+// function getValue(){
+//   let searchValue = document.querySelector('input').value.split(' ').join('')
 
 
 
   
-fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchValue}`)
-.then(res => res.json()) // parse response as JSON
-.then(data => {
-  console.log(data)
+// fetch(`https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${searchValue}`)
+// .then(res => res.json()) // parse response as JSON
+// .then(data => {
+//   console.log(data)
 
-  let drinkIndex = 0
-  document.querySelector('img').src = data.drinks[drinkIndex].strDrinkThumb;
-  document.querySelector('h2').innerText = data.drinks[drinkIndex].strDrink
-  document.querySelector('h3').innerText = data.drinks[drinkIndex].strInstructions
+//   let drinkIndex = 0
+//   document.querySelector('img').src = data.drinks[drinkIndex].strDrinkThumb;
+//   document.querySelector('h2').innerText = data.drinks[drinkIndex].strDrink
+//   document.querySelector('h3').innerText = data.drinks[drinkIndex].strInstructions
 
-  document.querySelector('#right-button').addEventListener('click', switchValuesMore)
-  function switchValuesMore(){
-
-    if(drinkIndex < data.drinks.length-1){
-      drinkIndex++
-      document.querySelector('img').src = data.drinks[drinkIndex].strDrinkThumb;
-      document.querySelector('h2').innerText = data.drinks[drinkIndex].strDrink
-      document.querySelector('h3').innerText = data.drinks[drinkIndex].strInstructions
-    }
+//   document.querySelector('#right-button').addEventListener('click', switchValuesMore)
   
-  }
+//   function switchValuesMore(){
 
-  document.querySelector('#left-button').addEventListener('click', switchValuesLess)
-  function switchValuesLess(){
-    if(drinkIndex > 0){
-      drinkIndex--
-      document.querySelector('img').src = data.drinks[drinkIndex].strDrinkThumb;
-      document.querySelector('h2').innerText = data.drinks[drinkIndex].strDrink
-      document.querySelector('h3').innerText = data.drinks[drinkIndex].strInstructions
-    }
+//     if(drinkIndex < data.drinks.length-1){
+//       drinkIndex++
+//       document.querySelector('img').src = data.drinks[drinkIndex].strDrinkThumb;
+//       document.querySelector('h2').innerText = data.drinks[drinkIndex].strDrink
+//       document.querySelector('h3').innerText = data.drinks[drinkIndex].strInstructions
+//     }
+  
+//   }
+
+//   document.querySelector('#left-button').addEventListener('click', switchValuesLess)
+//   function switchValuesLess(){
+//     if(drinkIndex > 0){
+//       drinkIndex--
+//       document.querySelector('img').src = data.drinks[drinkIndex].strDrinkThumb;
+//       document.querySelector('h2').innerText = data.drinks[drinkIndex].strDrink
+//       document.querySelector('h3').innerText = data.drinks[drinkIndex].strInstructions
+//     }
    
-  }
+//   }
   
 
-})
-.catch(err => {
-    console.log(`error ${err}`)
-});
+// })
+// .catch(err => {
+//     console.log(`error ${err}`)
+// });
 
 
+// }
+
+function phNum(arr){
+  let number = '(xxx) xxx-xxx'
+
+  arr.forEach(item => number = number.replace('x',item))
+  console.log(number)
 }
 
+let pgoneNumber = [1,3,2,4,2,4,5,8,3,6]
 
+phNum(pgoneNumber)
 
 
 

@@ -84,32 +84,75 @@
 // playChoices(['rock', 'paper', 'scissors'])
 
 
-let zeroArray = [false,1,2,0,0,5,0,3,4,5,0]
-function zeroAway (array){
-    counter = 0
+// let zeroArray = [false,1,2,0,0,5,0,3,4,5,0]
+// function zeroAway (array){
+//     counter = 0
 
-    for(let i = 0; i< array.length; i++){
+//     for(let i = 0; i< array.length; i++){
 
-        if(array[i] === 0){
-            array.splice(i,1)
-            i--;
-            counter++;
+//         if(array[i] === 0){
+//             array.splice(i,1)
+//             i--;
+//             counter++;
             
-        }
-    }
+//         }
+//     }
 
-    for(let i = 0; i < counter; i++){
-        array.push(0);
-    }
+//     for(let i = 0; i < counter; i++){
+//         array.push(0);
+//     }
    
     
-console.log(array)
+// console.log(array)
 
+// }
+
+// zeroAway(zeroArray)
+
+
+// let zeroFilteredArray = zeroArray.filter(item => item === 0);
+// let zeroRemoved = zeroArray.filter(item => item !== 0).concat(...zeroFilteredArray)
+// console.log(zeroRemoved)
+
+
+
+function fibonacci(n){
+    array = [1,1];
+
+    for(let i = 2; i < n+1; i++){
+
+        array.push(array[i]);
+        array[i] = array[i - 1] + array[i - 2];
+        
+
+    
+        
+    }
+
+    console.log(array)
+    sum = (array.reduce( (sum,item) => sum + item)) * 4
+
+    console.log(sum)
 }
 
-zeroAway(zeroArray)
+fibonacci(7)
 
 
-let zeroFilteredArray = zeroArray.filter(item => item === 0);
-let zeroRemoved = zeroArray.filter(item => item !== 0).concat(...zeroFilteredArray)
-console.log(zeroRemoved)
+
+function fibonacciAtZero(n){
+    array = [0,1];
+
+    for(let i = 2; i < n; i++){
+
+        array.push(array[i]);
+        array[i] = array[i - 1] + array[i - 2];
+             
+
+    
+        
+    }
+    console.log(array)
+    console.log(array[n-1])
+}
+
+fibonacciAtZero(5)
